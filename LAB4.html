@@ -289,57 +289,31 @@
   </div>
 
   <!-- Code -->
-  <div class="code-section reveal">
-    <div class="section-tag">Python Implementation</div>
-    <h2>Program <em>Execution</em></h2>
-    <p class="sub-desc">Numerical partial derivatives, 2D contour, 3D surface, and gradient vector field plots</p>
-
-    <div class="code-block">
-      <pre><span class="kw">import</span> numpy <span class="kw">as</span> np
-<span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt
-<span class="kw">from</span> mpl_toolkits.mplot3d <span class="kw">import</span> Axes3D
-
-<span class="cm"># Function to compute partial derivatives of temperature</span>
-<span class="kw">def</span> <span class="fn">compute_temperature_gradient</span>(T, dx, dy):
-    <span class="st">"""Computes the temperature gradient using numerical partial derivatives."""</span>
-    dTdx <span class="op">=</span> np.<span class="fn">gradient</span>(T, axis<span class="op">=</span><span class="nm">1</span>) <span class="op">/</span> dx  <span class="cm"># Partial derivative w.r.t x</span>
-    dTdy <span class="op">=</span> np.<span class="fn">gradient</span>(T, axis<span class="op">=</span><span class="nm">0</span>) <span class="op">/</span> dy  <span class="cm"># Partial derivative w.r.t y</span>
-    <span class="kw">return</span> dTdx, dTdy
-
-<span class="cm"># Generate temperature sample</span>
-x <span class="op">=</span> np.<span class="fn">linspace</span>(<span class="nm">0</span>, <span class="nm">10</span>, <span class="nm">100</span>)
-y <span class="op">=</span> np.<span class="fn">linspace</span>(<span class="nm">0</span>, <span class="nm">10</span>, <span class="nm">100</span>)
-X, Y <span class="op">=</span> np.<span class="fn">meshgrid</span>(x, y)
-
-<span class="cm"># Temperature function T = sin(X) * cos(Y)</span>
-T <span class="op">=</span> np.<span class="fn">sin</span>(X) <span class="op">*</span> np.<span class="fn">cos</span>(Y)
-
-<span class="cm"># Compute step sizes</span>
-dx <span class="op">=</span> x[<span class="nm">1</span>] <span class="op">-</span> x[<span class="nm">0</span>] ; dy <span class="op">=</span> y[<span class="nm">1</span>] <span class="op">-</span> y[<span class="nm">0</span>]
-dTdx, dTdy <span class="op">=</span> <span class="fn">compute_temperature_gradient</span>(T, dx, dy)
-
-<span class="cm"># ------- 2D Surface (Contour Plot) -------</span>
-plt.<span class="fn">figure</span>()
-plt.<span class="fn">contourf</span>(X, Y, T, <span class="nm">20</span>)
-plt.<span class="fn">colorbar</span>(label<span class="op">=</span><span class="st">"Temperature"</span>)
-plt.<span class="fn">title</span>(<span class="st">"2D Temperature Surface (Contour Plot)"</span>)
-plt.<span class="fn">show</span>()
-
-<span class="cm"># ------- 3D Surface Plot -------</span>
-fig <span class="op">=</span> plt.<span class="fn">figure</span>()
-ax <span class="op">=</span> fig.<span class="fn">add_subplot</span>(<span class="nm">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)
-ax.<span class="fn">plot_surface</span>(X, Y, T)
-ax.<span class="fn">set_title</span>(<span class="st">"3D Temperature Surface"</span>)
-plt.<span class="fn">show</span>()
-
-<span class="cm"># ------- Gradient Vector Field -------</span>
-plt.<span class="fn">contourf</span>(X, Y, T, <span class="nm">20</span>)
-plt.<span class="fn">colorbar</span>(label<span class="op">=</span><span class="st">"Temperature"</span>)
-plt.<span class="fn">quiver</span>(X, Y, dTdx, dTdy, scale<span class="op">=</span><span class="nm">50</span>)
-plt.<span class="fn">title</span>(<span class="st">"Temperature Gradient Vector Field"</span>)
-plt.<span class="fn">show</span>()</pre>
-    </div>
-  </div>
+  <div >
+    <img src="LAB4/1 (0).jpeg">
+    <div >
+  <div >
+     <img src="LAB4/1 (1).png">
+    <div >
+  <div >
+     <img src="LAB4/1 (2).png">
+    <div >
+  <div >
+     <img src="LAB4/1 (3).png">
+  <div >
+  <div >
+     <img src="LAB4/1 (4).png">
+  <div >
+  <div >
+    <img src="LAB4/1 (5).jpeg">
+    <div >
+  <div >
+     <img src="LAB4/1 (6).png">
+    <div >
+  <div >
+     <img src="LAB4/1 (7).png">
+    <div >
+  
 
   <!-- Results - Three Graphs -->
   <div class="results-section reveal">
